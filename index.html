@@ -15,12 +15,14 @@
           theme: {
             extend: {
               colors: {
-                kawaii: {
-                  pink: '#ff85a2',
-                  red: '#ff4060',
-                  blue: '#91c1ff',
-                  yellow: '#ffde9e',
-                  light: '#fff0f5',
+                hellokitty: {
+                  primary: '#FF69B4',    /* Classic Hello Kitty Pink */
+                  secondary: '#FF91AF',  /* Lighter pink for gradients */
+                  accent: '#FD0E35',     /* Red for accents like the bow */
+                  soft: '#FFE0F0',       /* Very light pink for backgrounds */
+                  white: '#FFFFFF',      /* White */
+                  darkpink: '#CA2C6F',   /* Darker pink for emphasis */
+                  outline: '#333333'     /* Dark gray for outlines */
                 }
               }
             }
@@ -30,17 +32,17 @@
 </head>
 <body class="font-sans antialiased text-gray-900 min-h-screen">
     <!-- Hero Section -->
-    <section class="hero-section relative flex items-center justify-center w-full min-h-screen bg-gradient-to-b from-kawaii-light to-kawaii-pink px-4 text-center">
+    <section class="hero-section relative flex items-center justify-center w-full min-h-screen bg-gradient-to-b from-hellokitty-soft to-hellokitty-primary px-4 text-center">
         <!-- Hello Kitty Bow -->
         <img src="images/hellokitty.webp" alt="Hello Kitty Bow" class="kitty-bow">
         
-        <div class="z-10 bg-white bg-opacity-70 p-6 rounded-3xl shadow-lg max-w-2xl">
-            <h1 class="font-kawaii text-4xl md:text-5xl lg:text-6xl mb-6 text-kawaii-red drop-shadow-lg">
+        <div class="z-10 bg-white bg-opacity-75 p-6 rounded-3xl shadow-lg max-w-2xl border-2 border-hellokitty-primary">
+            <h1 class="font-kawaii text-4xl md:text-5xl lg:text-6xl mb-6 text-hellokitty-accent drop-shadow-lg">
                 Hello Kitty's Biggest Fan 
                 <span class="strawberry">🍓</span>
             </h1>
             
-            <p class="font-kawaii text-xl md:text-2xl mb-6 text-kawaii-pink">
+            <p class="font-kawaii text-xl md:text-2xl mb-6 text-hellokitty-darkpink">
                 My sweet girl who loves
                 <span class="coffee-cup">☕</span> 
                 vanilla cold coffee, 
@@ -50,28 +52,28 @@
             </p>
             
             <button class="mt-8 pulse-animation bg-transparent border-0 focus:outline-none" aria-label="Scroll down">
-                <span class="text-4xl text-kawaii-red">↓</span>
+                <span class="text-4xl text-hellokitty-accent">↓</span>
             </button>
         </div>
     </section>
 
     <!-- Second section to scroll to -->
-    <section id="next-section" class="min-h-screen flex items-center justify-center bg-gradient-to-b from-kawaii-blue to-kawaii-light p-4">
+    <section id="next-section" class="min-h-screen flex items-center justify-center bg-gradient-to-b from-hellokitty-primary to-hellokitty-soft p-4">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="font-kawaii text-4xl md:text-5xl lg:text-6xl mb-6 text-kawaii-red">
+            <h2 class="font-kawaii text-4xl md:text-5xl lg:text-6xl mb-6 text-hellokitty-accent">
                 <span class="strawberry">🍓</span> Sweeter Than Strawberries <span class="strawberry">🍓</span>
             </h2>
             
-            <p class="font-kawaii text-xl md:text-2xl mb-6 text-kawaii-pink">
+            <p class="font-kawaii text-xl md:text-2xl mb-6 text-hellokitty-darkpink">
                 The cutest person who deserves all the McDonald's fries in the world
                 <span class="inline-block ml-2">🍟</span>
             </p>
             
             <!-- Photo with kawaii border -->
-            <div class="mt-8 p-4 bg-white bg-opacity-70 rounded-3xl shadow-lg border-4 border-kawaii-pink">
-                <img src="images/IMG_9816.jpeg" alt="My Beautiful Girlfriend" class="rounded-xl mb-4 mx-auto max-w-full">
+            <div class="mt-8 p-4 bg-white bg-opacity-70 rounded-3xl shadow-lg border-3 border-hellokitty-primary">
+                <img src="images/IMG_9816.jpeg" alt="My Beautiful Girlfriend" class="rounded-xl mb-4 mx-auto max-w-full border-2 border-hellokitty-secondary">
                 
-                <p class="font-kawaii text-kawaii-red">
+                <p class="font-kawaii text-hellokitty-accent">
                     <span class="coffee-cup">☕</span> Vanilla cold coffee date soon? <span class="coffee-cup">☕</span>
                 </p>
             </div>
