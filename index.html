@@ -3,33 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my soni kudi 💗</title>
+    <title>Hello Kitty Kawaii Space for My Sweetie 🍓</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@400;700&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                kawaii: {
+                  pink: '#ff85a2',
+                  red: '#ff4060',
+                  blue: '#91c1ff',
+                  yellow: '#ffde9e',
+                  light: '#fff0f5',
+                }
+              }
+            }
+          }
+        }
+    </script>
 </head>
 <body class="font-sans antialiased text-gray-900 min-h-screen">
     <!-- Hero Section -->
-    <section class="hero-section relative flex items-center justify-center w-full min-h-screen bg-gradient-to-b from-pink-100 to-purple-200 px-4 text-center">
-        <div class="z-10">
-            <h1 class="font-greatvibes text-5xl md:text-7xl lg:text-8xl mb-6 text-pink-600 drop-shadow-lg">Yall about to see why im the luckiest guy</h1>
-            <p class="font-dancingscript text-xl md:text-2xl lg:text-3xl mb-8 text-purple-700">Officially certified she's indeed the prettiest</p>
-            <button class="mt-12 pulse-animation bg-transparent border-0 focus:outline-none" aria-label="Scroll down">
-                <span class="text-4xl text-pink-500">↓</span>
+    <section class="hero-section relative flex items-center justify-center w-full min-h-screen bg-gradient-to-b from-kawaii-light to-kawaii-pink px-4 text-center">
+        <!-- Hello Kitty Bow -->
+        <img src="https://i.imgur.com/JYuZxbA.png" alt="Hello Kitty Bow" class="kitty-bow">
+        
+        <div class="z-10 bg-white bg-opacity-70 p-6 rounded-3xl shadow-lg max-w-2xl">
+            <h1 class="font-kawaii text-4xl md:text-5xl lg:text-6xl mb-6 text-kawaii-red drop-shadow-lg">
+                Hello Kitty's Biggest Fan 
+                <span class="strawberry">🍓</span>
+            </h1>
+            
+            <p class="font-kawaii text-xl md:text-2xl mb-6 text-kawaii-pink">
+                My sweet girl who loves
+                <span class="coffee-cup">☕</span> 
+                vanilla cold coffee, 
+                <span class="strawberry">🍓</span> 
+                strawberries & McDonald's fries 
+                <span class="inline-block">🍟</span>
+            </p>
+            
+            <button class="mt-8 pulse-animation bg-transparent border-0 focus:outline-none" aria-label="Scroll down">
+                <span class="text-4xl text-kawaii-red">↓</span>
             </button>
         </div>
     </section>
 
     <!-- Second section to scroll to -->
-    <section id="next-section" class="min-h-screen flex items-center justify-center bg-gradient-to-b from-purple-200 to-pink-100 p-4">
+    <section id="next-section" class="min-h-screen flex items-center justify-center bg-gradient-to-b from-kawaii-blue to-kawaii-light p-4">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="font-greatvibes text-4xl md:text-5xl lg:text-6xl mb-6 text-purple-600">You Absolute Beauty</h2>
-            <p class="font-dancingscript text-xl md:text-2xl mb-6 text-pink-700">This was meant to be her place</p>
-            <!-- Placeholder for future content -->
-            <div class="mt-8 p-4 bg-white bg-opacity-40 rounded-lg shadow-lg">
-                <img src="images/IMG_9816.jpeg"   alt="Placeholder Image" class="rounded-lg mb-4">
+            <h2 class="font-kawaii text-4xl md:text-5xl lg:text-6xl mb-6 text-kawaii-red">
+                <span class="strawberry">🍓</span> Sweeter Than Strawberries <span class="strawberry">🍓</span>
+            </h2>
+            
+            <p class="font-kawaii text-xl md:text-2xl mb-6 text-kawaii-pink">
+                The cutest person who deserves all the McDonald's fries in the world
+                <span class="inline-block ml-2">🍟</span>
+            </p>
+            
+            <!-- Photo with kawaii border -->
+            <div class="mt-8 p-4 bg-white bg-opacity-70 rounded-3xl shadow-lg border-4 border-kawaii-pink">
+                <img src="images/IMG_9816.jpeg" alt="My Beautiful Girlfriend" class="rounded-xl mb-4 mx-auto max-w-full">
+                
+                <p class="font-kawaii text-kawaii-red">
+                    <span class="coffee-cup">☕</span> Vanilla cold coffee date soon? <span class="coffee-cup">☕</span>
+                </p>
             </div>
         </div>
     </section>

@@ -1,4 +1,4 @@
-/* Custom styles for "Prettiest in the World" website */
+/* Custom styles for Hello Kitty themed website */
 
 /* Font family utilities */
 .font-greatvibes {
@@ -7,6 +7,11 @@
 
 .font-dancingscript {
     font-family: 'Dancing Script', cursive;
+}
+
+.font-kawaii {
+    font-family: 'Varela Round', 'Comic Sans MS', cursive, sans-serif;
+    letter-spacing: 0.5px;
 }
 
 /* Hero section background with soft overlay */
@@ -27,6 +32,41 @@
     background-position: center;
     opacity: 0.15;
     z-index: 0;
+}
+
+/* Hello Kitty bow decoration */
+.kitty-bow {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    z-index: 5;
+    opacity: 0.8;
+}
+
+/* Strawberry decoration */
+.strawberry {
+    display: inline-block;
+    margin: 0 5px;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Coffee cup */
+.coffee-cup {
+    display: inline-block;
+    margin: 0 5px;
+    animation: wiggle 3s infinite ease-in-out;
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
 }
 
 /* Scroll down indicator animation */
