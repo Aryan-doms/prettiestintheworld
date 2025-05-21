@@ -6,11 +6,10 @@
       "use": "@vercel/static"
     }
   ],
-  "redirects": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "https://www.prettiestintheworld.com/$1",
-      "permanent": true
+      "src": "/(.*)",
+      "dest": "/$1"
     }
   ]
 }
