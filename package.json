@@ -1,0 +1,11 @@
+{
+  "name": "prettiestintheworld",
+  "version": "1.0.0",
+  "description": "A beautiful website dedicated to my girlfriend",
+  "scripts": {
+    "start": "serve"
+  },
+  "devDependencies": {
+    "serve": "^14.0.0"
+  }
+}
