@@ -1,28 +1,19 @@
 /* Custom styles for Hello Kitty themed website */
 
 /* Font family utilities */
-.font-greatvibes {
-    font-family: 'Great Vibes', cursive;
-}
-
-.font-dancingscript {
-    font-family: 'Dancing Script', cursive;
-}
-
-.font-kawaii {
-    font-family: 'Varela Round', 'Comic Sans MS', cursive, sans-serif;
+.font-fredoka {
+    font-family: 'Fredoka One', cursive, sans-serif;
     letter-spacing: 0.5px;
 }
 
-/* Hero section background with soft overlay */
-.hero-section {
-    position: relative;
-    overflow: hidden;
+.font-quicksand {
+    font-family: 'Quicksand', sans-serif;
 }
 
-.hero-section::before {
+/* Background patterns and decorations */
+body::before {
     content: '';
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -31,19 +22,152 @@
     background-size: 200px 200px;
     background-position: center;
     opacity: 0.1;
-    z-index: 0;
-    background-color: #FFE0F0;
+    z-index: -1;
 }
 
-/* Hello Kitty bow decoration */
-.kitty-bow {
-    position: absolute;
+/* Hello Kitty floating bows */
+.kitty-bow-top-right {
+    position: fixed;
     top: 20px;
     right: 20px;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
+    background-image: url('../images/hellokitty.png');
+    background-size: contain;
+    background-repeat: no-repeat;
     z-index: 5;
-    opacity: 0.8;
+    animation: float 6s infinite ease-in-out;
+}
+
+.kitty-bow-bottom-left {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    background-image: url('../images/hellokitty.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 5;
+    transform: rotate(-15deg);
+    animation: float 6s infinite ease-in-out reverse;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+/* Floating hearts animation */
+.floating-hearts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.floating-hearts::before,
+.floating-hearts::after {
+    content: '💗';
+    position: absolute;
+    font-size: 24px;
+    opacity: 0.7;
+    animation: float-heart 8s infinite ease-in-out;
+}
+
+.floating-hearts::before {
+    top: -30px;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.floating-hearts::after {
+    top: -20px;
+    right: 20%;
+    animation-delay: 3s;
+    font-size: 20px;
+}
+
+@keyframes float-heart {
+    0% { transform: translateY(0) rotate(0); opacity: 0; }
+    20% { opacity: 0.7; }
+    80% { opacity: 0.7; }
+    100% { transform: translateY(120px) rotate(20deg); opacity: 0; }
+}
+
+/* Dynamic floating hearts */
+.dynamic-heart {
+    position: fixed;
+    bottom: -20px;
+    font-size: 15px;
+    animation: float-up 10s linear forwards;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+@keyframes float-up {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Ribbon style */
+.ribbon-container {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.ribbon {
+    display: inline-block;
+    position: relative;
+    padding: 6px 20px;
+    background: #FD0E35;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.ribbon::before,
+.ribbon::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    border-style: solid;
+    border-width: 0 10px 10px 0;
+    height: 0;
+    width: 0;
+}
+
+.ribbon::before {
+    left: 0;
+    border-color: transparent #be0025 transparent transparent;
+}
+
+.ribbon::after {
+    right: 0;
+    border-width: 0 0 10px 10px;
+    border-color: transparent transparent transparent #be0025;
 }
 
 /* Strawberry decoration */
@@ -102,14 +226,209 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
 
-/* Add a soft glow effect to important elements */
-.glow-effect {
-    filter: drop-shadow(0 0 5px rgba(255, 105, 180, 0.4));
+/* Hello Kitty photo frame */
+.kitty-frame {
+    position: relative;
+    padding: 25px 30px 40px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.2);
+    border: 3px solid #FF69B4;
 }
 
-/* For mobile responsiveness */
+.kitty-ears {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    height: 40px;
+    text-align: center;
+}
+
+.kitty-ears::before,
+.kitty-ears::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-color: #FF69B4;
+    border-radius: 50% 50% 0 0;
+}
+
+.kitty-ears::before {
+    left: 30%;
+    transform: rotate(-15deg);
+}
+
+.kitty-ears::after {
+    right: 30%;
+    transform: rotate(15deg);
+}
+
+.kitty-whiskers-left,
+.kitty-whiskers-right {
+    position: absolute;
+    bottom: 15px;
+    width: 40px;
+    height: 20px;
+}
+
+.kitty-whiskers-left {
+    left: 25%;
+}
+
+.kitty-whiskers-right {
+    right: 25%;
+}
+
+.kitty-whiskers-left::before,
+.kitty-whiskers-left::after,
+.kitty-whiskers-right::before,
+.kitty-whiskers-right::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    background-color: #333;
+    width: 100%;
+}
+
+.kitty-whiskers-left::before {
+    top: 7px;
+    transform: rotate(10deg);
+}
+
+.kitty-whiskers-left::after {
+    bottom: 7px;
+    transform: rotate(-10deg);
+}
+
+.kitty-whiskers-right::before {
+    top: 7px;
+    transform: rotate(-10deg);
+}
+
+.kitty-whiskers-right::after {
+    bottom: 7px;
+    transform: rotate(10deg);
+}
+
+/* Favorites section */
+.favorites-section {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    border: 2px dashed #FFD1DC;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.favorite-item {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.favorite-item:hover {
+    transform: translateY(-5px);
+}
+
+.emoji-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #FFE0F0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 28px;
+}
+
+/* Message card */
+.message-section {
+    position: relative;
+}
+
+.message-card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(255, 105, 180, 0.15);
+    border: 3px solid #FF69B4;
+    z-index: 1;
+}
+
+.heart-decoration {
+    position: absolute;
+    font-size: 30px;
+    color: #FF69B4;
+    opacity: 0.5;
+    top: -15px;
+    left: 20px;
+}
+
+.heart-decoration::before {
+    content: '❤️';
+}
+
+.heart-right {
+    left: auto;
+    right: 20px;
+}
+
+.heart-beat {
+    animation: heartbeat 1.5s infinite;
+    font-size: 28px;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* Footer pattern */
+.kitty-pattern {
+    height: 20px;
+    background: repeating-linear-gradient(45deg, #FF69B4, #FF69B4 10px, #FFD1DC 10px, #FFD1DC 20px);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    opacity: 0.7;
+}
+
+/* Mobile responsiveness */
 @media (max-width: 640px) {
-    .hero-section {
-        padding: 2rem 1rem;
+    .kitty-frame {
+        padding: 20px 15px 30px;
+    }
+    
+    .kitty-ears::before {
+        left: 25%;
+    }
+    
+    .kitty-ears::after {
+        right: 25%;
+    }
+    
+    .ribbon {
+        font-size: 14px;
+        padding: 5px 15px;
+    }
+    
+    .kitty-bow-top-right {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .kitty-bow-bottom-left {
+        width: 50px;
+        height: 50px;
     }
 }
