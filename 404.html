@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Prettiest in the World</title>
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-color: #fff7f9;
+            font-family: 'Quicksand', sans-serif;
+            text-align: center;
+            padding: 50px 20px;
+            background-image: url('images/hearts-bg.png');
+            background-size: 200px;
+            background-repeat: repeat;
+        }
+        .error-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
+            border: 3px solid #ff69b4;
+        }
+        h1 {
+            color: #ff69b4;
+            font-family: 'Fredoka One', cursive;
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 200px;
+            margin: 20px auto;
+        }
+        .back-btn {
+            display: inline-block;
+            background-color: #ff69b4;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover {
+            background-color: #ff4da0;
+            transform: scale(1.05);
+        }
+        .sad-hello-kitty {
+            position: relative;
+        }
+        .tear {
+            position: absolute;
+            width: 8px;
+            height: 15px;
+            background-color: #87CEFA;
+            border-radius: 50%;
+            animation: falling-tear 2s infinite;
+        }
+        .tear-left {
+            top: 120px;
+            left: 70px;
+            animation-delay: 0.3s;
+        }
+        .tear-right {
+            top: 120px;
+            right: 70px;
+            animation-delay: 0.7s;
+        }
+        @keyframes falling-tear {
+            0% {transform: translateY(0) scale(1);}
+            50% {transform: translateY(20px) scale(0.7);}
+            100% {transform: translateY(40px) scale(0.3); opacity: 0;}
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1>Oops! Page Not Found</h1>
+        <div class="sad-hello-kitty">
+            <img src="images/hellokitty.png" alt="Sad Hello Kitty">
+            <div class="tear tear-left"></div>
+            <div class="tear tear-right"></div>
+        </div>
+        <p>Sorry, the page you're looking for isn't here.</p>
+        <p>Please go back to the homepage to see the prettiest girl in the world!</p>
+        <a href="/" class="back-btn">Back to Homepage</a>
+    </div>
+    
+    <script>
+        // Report 404 errors to analytics if you add Google Analytics later
+        document.addEventListener('DOMContentLoaded', function() {
+            // This would send a 404 error report to analytics
+            // if (typeof ga === 'function') {
+            //     ga('send', 'event', '404', 'Page Not Found', document.location.pathname);
+            // }
+        });
+    </script>
+</body>
+</html>

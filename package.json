@@ -1,11 +1,20 @@
 {
   "name": "prettiestintheworld",
   "version": "1.0.0",
-  "description": "A beautiful website dedicated to my girlfriend",
+  "description": "A beautiful website dedicated to my girlfriend - the prettiest in the world",
   "scripts": {
-    "start": "serve"
+    "start": "serve",
+    "seo-audit": "lighthouse http://localhost:3000 --view --output-path=./lighthouse-report.html"
   },
   "devDependencies": {
+    "lighthouse": "^11.7.1",
     "serve": "^14.0.0"
-  }
+  },
+  "keywords": [
+    "prettiest in the world",
+    "hello kitty",
+    "cute website",
+    "most beautiful",
+    "girlfriend website"
+  ]
 }

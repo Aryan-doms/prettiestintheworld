@@ -3,7 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>✨ My Hello Kitty Princess ✨</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>Prettiest in the World | Hello Kitty Princess</title>
+    <meta name="title" content="Prettiest in the World | Hello Kitty Princess">
+    <meta name="description" content="Dedicated to the prettiest girl in the world, my Hello Kitty princess. The ultimate celebration of beauty, love, and all things Hello Kitty.">
+    <meta name="keywords" content="prettiest in the world, most beautiful girl in the world, prettiest girl alive, hello kitty lover, world's prettiest, most beautiful, hello kitty princess, strawberry lover, prettiest girlfriend"
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.prettiestintheworld.com/">
+    <meta property="og:title" content="Prettiest in the World | Hello Kitty Princess">
+    <meta property="og:description" content="Dedicated to the prettiest girl in the world, my Hello Kitty princess. The ultimate celebration of beauty, love, and all things Hello Kitty.">
+    <meta property="og:image" content="https://www.prettiestintheworld.com/images/IMG_9816.jpeg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.prettiestintheworld.com/">
+    <meta property="twitter:title" content="Prettiest in the World | Hello Kitty Princess">
+    <meta property="twitter:description" content="Dedicated to the prettiest girl in the world, my Hello Kitty princess. The ultimate celebration of beauty, love, and all things Hello Kitty.">
+    <meta property="twitter:image" content="https://www.prettiestintheworld.com/images/IMG_9816.jpeg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.prettiestintheworld.com/">
+    
+    <!-- Resource Hints for Performance -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/script.js" as="script">
+    <link rel="preload" href="images/hellokitty.png" as="image" type="image/png">
+    <link rel="preload" href="images/hearts-bg.png" as="image" type="image/png">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +40,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- JSON-LD structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Prettiest in the World | Hello Kitty Princess",
+      "description": "Dedicated to the prettiest girl in the world, my Hello Kitty princess. The ultimate celebration of beauty, love, and all things Hello Kitty.",
+      "url": "https://www.prettiestintheworld.com/",
+      "image": "https://www.prettiestintheworld.com/images/IMG_9816.jpeg",
+      "author": {
+        "@type": "Person",
+        "name": "Loving Boyfriend"
+      },
+      "about": {
+        "@type": "Person",
+        "name": "Prettiest Girl",
+        "description": "The most beautiful girl in the world who loves Hello Kitty, strawberries, vanilla cold coffee, and McDonald's fries."
+      },
+      "keywords": "prettiest in the world, hello kitty, prettiest girl, beauty, love, cute website"
+    }
+    </script>
+    
     <script>
         tailwind.config = {
           theme: {
@@ -121,6 +173,35 @@
             </div>
         </section>
         
+        <!-- Visitor Engagement Section (helps with SEO) -->
+        <section class="engagement-section mb-16 max-w-md mx-auto">
+            <div class="bg-white/90 rounded-3xl p-6 shadow-lg border-2 border-kitty-primary">
+                <h2 class="font-fredoka text-2xl text-kitty-accent mb-4 text-center">You Think She's Pretty Too?</h2>
+                <p class="font-quicksand text-kitty-dark text-center mb-4">
+                    Leave a sweet message for the prettiest girl in the world!
+                </p>
+                
+                <form id="visitorMessage" class="space-y-4" netlify>
+                    <div>
+                        <label for="name" class="block font-quicksand text-kitty-dark mb-2">Your Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-2 rounded-full border-2 border-kitty-light focus:border-kitty-primary outline-none" placeholder="Your name">
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block font-quicksand text-kitty-dark mb-2">Your Message</label>
+                        <textarea id="message" name="message" rows="3" class="w-full px-4 py-2 rounded-xl border-2 border-kitty-light focus:border-kitty-primary outline-none resize-none" placeholder="Write something sweet..."></textarea>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" class="bg-kitty-primary hover:bg-kitty-dark text-white font-quicksand font-bold py-2 px-6 rounded-full transition-all hover:scale-105 inline-flex items-center">
+                            <span>Send Love</span>
+                            <span class="ml-2">💖</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        
         <!-- Footer with animated pattern -->
         <footer class="text-center pb-8 relative">
             <div class="kitty-pattern"></div>
@@ -135,5 +216,10 @@
     
     <!-- Custom JavaScript -->
     <script src="js/script.js"></script>
+    <script src="js/fresh-content.js"></script>
+    <script src="js/social-share.js"></script>
+    
+    <!-- Add last modified date for SEO freshness -->
+    <p class="text-xs text-center text-gray-400 mt-2">Last updated: <span id="last-modified-date">May 21, 2025</span></p>
 </body>
 </html>
