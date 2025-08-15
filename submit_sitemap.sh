@@ -1,7 +1,3 @@
-#!/bin/bash
-
-# Script to submit sitemap to search engines
-# This helps search engines discover and index your website faster
 
 # Submit to Google
 echo "Submitting sitemap to Google..."
