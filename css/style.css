@@ -432,3 +432,208 @@ h1, h2, h3, h4, h5, h6 {
         height: 50px;
     }
 }
+/* Rose Day Countdown Styles */
+.countdown-section {
+    padding: 0 20px;
+}
+
+.countdown-container {
+    position: relative;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 209, 220, 0.95) 100%);
+    border-radius: 30px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+    border: 3px solid #FF69B4;
+    overflow: hidden;
+}
+
+.countdown-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 182, 193, 0.2) 0%, transparent 70%);
+    animation: pulse-bg 4s infinite ease-in-out;
+}
+
+.countdown-title {
+    color: #D81B60;
+    text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+.countdown-subtitle {
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+.time-box {
+    background: linear-gradient(135deg, #FF69B4 0%, #FF1493 100%);
+    border-radius: 20px;
+    padding: 20px 15px;
+    min-width: 80px;
+    box-shadow: 0 5px 15px rgba(255, 20, 147, 0.4);
+    border: 3px solid #FFF;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+.time-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 20, 147, 0.6);
+}
+
+.time-value {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.5rem;
+    color: #FFF;
+    text-align: center;
+    line-height: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.time-label {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.9rem;
+    color: #FFF;
+    text-align: center;
+    margin-top: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.time-separator {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2rem;
+    color: #D81B60;
+    font-weight: bold;
+}
+
+/* Rose decorations */
+.rose-decoration {
+    position: absolute;
+    font-size: 3rem;
+    animation: rotate-rose 10s infinite linear;
+    z-index: 1;
+}
+
+.rose-left {
+    top: 10px;
+    left: 10px;
+}
+
+.rose-right {
+    top: 10px;
+    right: 10px;
+}
+
+.floating-rose {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.6;
+    animation: float-rose 8s infinite ease-in-out;
+    z-index: 1;
+}
+
+.floating-rose-1 {
+    bottom: 20px;
+    left: 30px;
+    animation-delay: 0s;
+}
+
+.floating-rose-2 {
+    bottom: 40px;
+    right: 40px;
+    animation-delay: 2s;
+}
+
+.floating-rose-3 {
+    top: 50%;
+    left: 20px;
+    animation-delay: 4s;
+}
+
+/* Animations */
+@keyframes pulse-bg {
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1) rotate(180deg);
+        opacity: 0.8;
+    }
+}
+
+@keyframes rotate-rose {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes float-rose {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
+}
+
+/* Mobile responsiveness for countdown */
+@media (max-width: 640px) {
+    .countdown-container {
+        padding: 30px 20px;
+    }
+    
+    .countdown-title {
+        font-size: 1.5rem;
+    }
+    
+    .countdown-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .time-box {
+        min-width: 65px;
+        padding: 15px 10px;
+    }
+    
+    .time-value {
+        font-size: 1.8rem;
+    }
+    
+    .time-label {
+        font-size: 0.75rem;
+    }
+    
+    .time-separator {
+        font-size: 1.5rem;
+    }
+    
+    .rose-decoration {
+        font-size: 2rem;
+    }
+    
+    .floating-rose {
+        font-size: 1.5rem;
+    }
+}
