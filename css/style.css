@@ -435,16 +435,22 @@ h1, h2, h3, h4, h5, h6 {
 /* Rose Day Countdown Styles */
 .countdown-section {
     padding: 0 20px;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .countdown-container {
     position: relative;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 209, 220, 0.95) 100%);
     border-radius: 30px;
-    padding: 40px 30px;
+    padding: 60px 40px;
     box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
     border: 3px solid #FF69B4;
     overflow: hidden;
+    max-width: 800px;
+    width: 100%;
 }
 
 .countdown-container::before {
@@ -600,8 +606,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Mobile responsiveness for countdown */
 @media (max-width: 640px) {
+    .countdown-section {
+        min-height: 80vh;
+        padding: 0 15px;
+    }
+    
     .countdown-container {
-        padding: 30px 20px;
+        padding: 40px 25px;
     }
     
     .countdown-title {
@@ -612,21 +623,27 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 0.95rem;
     }
     
+    .countdown-timer {
+        gap: 8px;
+    }
+    
     .time-box {
-        min-width: 65px;
-        padding: 15px 10px;
+        min-width: 70px;
+        padding: 18px 12px;
     }
     
     .time-value {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
     
     .time-label {
         font-size: 0.75rem;
+        margin-top: 6px;
     }
     
     .time-separator {
         font-size: 1.5rem;
+        display: none;
     }
     
     .rose-decoration {
