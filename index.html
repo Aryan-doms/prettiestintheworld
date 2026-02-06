@@ -9,21 +9,7 @@
     <meta name="title" content="Prettiest Hello Kitty in the World | My Hello Kitty Princess">
     <meta name="description" content="Meet my Hello Kitty princess: the prettiest Hello Kitty in the world, the prettiest princess in the world, and the prettiest in the world. Celebrate love, beauty, and all things Hello Kitty.">
     <meta name="keywords" content="prettiest in the world, my hello kitty princess, prettiest hello kitty in the world, prettiest princess in the world, prettiest girl alive, hello kitty lover, world's prettiest, most beautiful, hello kitty princess, strawberry lover, prettiest girlfriend, cutest hello kitty, beautiful princess">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.prettiestintheworld.com/">
-    <meta property="og:title" content="Prettiest Hello Kitty in the World | My Hello Kitty Princess">
-    <meta property="og:description" content="Meet my Hello Kitty princess: the prettiest Hello Kitty in the world, the prettiest princess in the world, and the prettiest in the world. Celebrate love, beauty, and all things Hello Kitty.">
-    <meta property="og:image" content="https://www.prettiestintheworld.com/images/IMG_9816.jpeg">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.prettiestintheworld.com/">
-    <meta property="twitter:title" content="Prettiest Hello Kitty in the World | My Hello Kitty Princess">
-    <meta property="twitter:description" content="Meet my Hello Kitty princess: the prettiest Hello Kitty in the world, the prettiest princess in the world, and the prettiest in the world. Celebrate love, beauty, and all things Hello Kitty.">
-    <meta property="twitter:image" content="https://www.prettiestintheworld.com/images/IMG_9816.jpeg">
-    
+        
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.prettiestintheworld.com/">
     
@@ -105,8 +91,8 @@
         </header>
         
         <!-- Rose Day Countdown Section -->
-        <section class="countdown-section mb-12 animate__animated animate__fadeIn animate__delay-2s">
-            <div class="countdown-container">
+        <section id="countdown-section" class="mb-12 animate__animated animate__fadeIn animate__delay-2s">
+            <div class="countdown-container relative">
                 <div class="rose-decoration rose-left">🌹</div>
                 <div class="rose-decoration rose-right">🌹</div>
                 
@@ -117,7 +103,7 @@
                     something special for my phool..❤️
                 </p>
                 
-                <div class="countdown-timer">
+                <div class="countdown-timer mb-8">
                     <div class="time-box">
                         <div class="time-value" id="days">00</div>
                         <div class="time-label">Days</div>
@@ -138,11 +124,84 @@
                         <div class="time-label">Seconds</div>
                     </div>
                 </div>
+
+                <!-- Rose Day Actions -->
+                 <div id="rose-day-actions" class="flex flex-col gap-4 max-w-xs mx-auto text-center relative z-20">
+                    <!-- Button 1: Beautiful Girl Redirect -->
+                    <button id="show-main-content-btn" class="bg-kitty-light hover:bg-kitty-primary hover:text-white text-kitty-dark font-quicksand font-bold py-3 px-6 rounded-full shadow-md transition-all transform hover:scale-105 border-2 border-kitty-primary">
+                        Do you want to see a beautiful girl than rose? 🌹
+                    </button>
+                    
+                    <!-- Button 2: Surprise -->
+                    <button id="surprise-btn" class="bg-kitty-accent hover:bg-red-600 text-white font-fredoka font-bold py-3 px-6 rounded-full shadow-md transition-all transform hover:scale-105 animate__animated animate__pulse animate__infinite">
+                        Click here for surprise! 🎁
+                    </button>
+                    <p id="wait-message" class="hidden text-kitty-dark font-quicksand mt-2">Wait for the time baby! ⏰</p>
+                </div>
+
+                <!-- Late Banner (Hidden by Default) -->
+                <div id="late-banner" class="hidden mt-6 bg-kitty-lighter border-2 border-kitty-accent rounded-xl p-4 animate__animated animate__bounceIn">
+                    <p class="font-quicksand text-kitty-dark font-bold text-lg mb-3">
+                        Aww! you're late baby girl so now click here to unlock it 🥺
+                    </p>
+                    <button id="unlock-btn" class="bg-kitty-accent text-white font-bold py-2 px-6 rounded-full shadow-lg hover:scale-105 transition-transform">
+                        Unlock 🔓
+                    </button>
+                </div>
+
+                <!-- Password Section (Hidden by Default) -->
+                <div id="password-section" class="hidden mt-6 bg-white/80 rounded-2xl p-6 shadow-xl border-2 border-kitty-primary animate__animated animate__fadeInUp">
+                    <h3 class="font-fredoka text-xl text-kitty-dark mb-4">Guess the password if you can 🤫</h3>
+                    <input type="text" id="password-input" class="w-full px-4 py-3 rounded-full border-2 border-kitty-light focus:border-kitty-primary outline-none text-center font-quicksand mb-3" placeholder="Enter password...">
+                    <button id="submit-password" class="w-full bg-kitty-primary text-white font-bold py-2 rounded-full mb-3 hover:bg-kitty-dark">Let's Go!</button>
+                    <a href="https://wa.me/7874444598?text=hieee%20my%20cutu%20where%20is%20my%20passworddd" target="_blank" class="text-sm text-kitty-dark hover:underline flex items-center justify-center gap-1">
+                        fine! click here your cutu will help you
+                    </a>
+                </div>
                 
                 <div class="floating-rose floating-rose-1">🌹</div>
                 <div class="floating-rose floating-rose-2">🌹</div>
                 <div class="floating-rose floating-rose-3">🌹</div>
             </div>
+
+            <!-- Mini Game Section (Hidden by Default) -->
+            <div id="mini-game-section" class="hidden max-w-md mx-auto mt-8 bg-white/90 rounded-3xl p-6 shadow-2xl border-4 border-kitty-light relative animate__animated animate__zoomIn">
+                <div class="absolute -top-6 -right-6 text-4xl animate-bounce">🎀</div>
+                <div class="absolute -bottom-6 -left-6 text-4xl animate-bounce">🎀</div>
+                
+                <h3 class="font-fredoka text-2xl text-center text-kitty-primary mb-2">Flashback Flowers 🌸</h3>
+                <p class="text-center font-quicksand text-sm text-kitty-dark mb-4">Tell me when I gave you this?</p>
+                
+                <div id="game-image-container" class="mb-6 relative group">
+                    <div class="absolute inset-0 bg-kitty-primary rounded-xl rotate-3 opacity-20 group-hover:rotate-6 transition-transform"></div>
+                    <img id="game-image" src="" alt="Flower Memory" class="relative rounded-xl shadow-md w-full h-64 object-cover">
+                </div>
+                
+                <div class="space-y-4">
+                    <input type="date" id="game-date-input" class="w-full px-6 py-3 rounded-full border-2 border-kitty-primary text-kitty-dark text-center font-quicksand focus:outline-none focus:ring-4 focus:ring-kitty-light shadow-sm">
+                    <button id="submit-guess" class="w-full bg-gradient-to-r from-kitty-primary to-kitty-dark text-white font-bold py-3 rounded-full shadow-lg transform active:scale-95 transition-all">
+                        Is this correct? 💘
+                    </button>
+                </div>
+                
+                <div id="wrongs-counter" class="mt-4 text-center font-quicksand text-xs text-red-500 font-bold hidden">
+                    You don't love him counter: <span id="wrong-count">0</span> 💔
+                </div>
+            </div>
+
+            <!-- Final Prize Section (Hidden by Default) -->
+            <div id="final-prize-section" class="hidden max-w-md mx-auto mt-8 bg-white/95 rounded-[2rem] p-8 shadow-2xl border-4 border-kitty-accent text-center animate__animated animate__fadeInUp">
+                <h2 class="font-fredoka text-3xl text-kitty-accent mb-4">To My First Flower 🌹</h2>
+                <div class="relative mb-6">
+                    <div class="absolute -inset-2 bg-gradient-to-r from-pink-300 to-red-300 rounded-2xl blur opacity-75"></div>
+                    <img src="images/24-06-24.jpg" alt="Our First Flower" class="relative rounded-xl shadow-xl w-full">
+                </div>
+                <p class="font-quicksand text-kitty-dark text-lg leading-relaxed italic">
+                    "The very first flower of our life. On the 24th of June of 2024, I gave my very first flower to a girl, and you received the very first flower of your life."
+                </p>
+                <div class="mt-6 text-4xl animate-pulse">❤️</div>
+            </div>
+
         </section>
         
         <!-- Main photo showcase with decorative frame -->
@@ -214,34 +273,6 @@
             </div>
         </section>
         
-        <!-- Visitor Engagement Section (helps with SEO) -->
-        <section class="engagement-section mb-16 max-w-md mx-auto" style="display: none;">
-            <div class="bg-white/90 rounded-3xl p-6 shadow-lg border-2 border-kitty-primary">
-                <h2 class="font-fredoka text-2xl text-kitty-accent mb-4 text-center">You Think She's Pretty Too?</h2>
-                <p class="font-quicksand text-kitty-dark text-center mb-4">
-                    Leave a sweet message for the prettiest girl in the world!
-                </p>
-                
-                <form id="visitorMessage" class="space-y-4" netlify>
-                    <div>
-                        <label for="name" class="block font-quicksand text-kitty-dark mb-2">Your Name</label>
-                        <input type="text" id="name" name="name" class="w-full px-4 py-2 rounded-full border-2 border-kitty-light focus:border-kitty-primary outline-none" placeholder="Your name">
-                    </div>
-                    
-                    <div>
-                        <label for="message" class="block font-quicksand text-kitty-dark mb-2">Your Message</label>
-                        <textarea id="message" name="message" rows="3" class="w-full px-4 py-2 rounded-xl border-2 border-kitty-light focus:border-kitty-primary outline-none resize-none" placeholder="Write something sweet..."></textarea>
-                    </div>
-                    
-                    <div class="text-center">
-                        <button type="submit" class="bg-kitty-primary hover:bg-kitty-dark text-white font-quicksand font-bold py-2 px-6 rounded-full transition-all hover:scale-105 inline-flex items-center">
-                            <span>Send Love</span>
-                            <span class="ml-2">💖</span>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </section>
         
         <!-- Footer with animated pattern -->
         <footer class="text-center pb-8 relative">
@@ -258,6 +289,7 @@
     <!-- Custom JavaScript -->
     <script src="js/script.js"></script>
     <script src="js/countdown.js"></script>
+    <script src="js/rose-day.js"></script>
     <script src="js/fresh-content.js"></script>
     
     <!-- Add last modified date for SEO freshness -->

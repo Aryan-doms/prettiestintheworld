@@ -434,23 +434,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* Rose Day Countdown Styles */
 .countdown-section {
-    padding: 0 20px;
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 20px 0;
+    width: 100%;
 }
 
 .countdown-container {
     position: relative;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 209, 220, 0.95) 100%);
     border-radius: 30px;
-    padding: 60px 40px;
+    padding: 40px 20px;
     box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
     border: 3px solid #FF69B4;
     overflow: hidden;
-    max-width: 800px;
     width: 100%;
+    margin: 0 auto;
 }
 
 .countdown-container::before {

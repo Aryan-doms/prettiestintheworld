@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rose Day Surprise | For My Princess</title>
+    
+    <!-- Resource Hints -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="images/hellokitty.png" as="image" type="image/png">
+    <link rel="preload" href="images/hearts-bg.png" as="image" type="image/png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Fredoka+One&family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                kitty: {
+                  primary: '#FF69B4', light: '#FFD1DC', lighter: '#FFE0F0',
+                  dark: '#FF4D8A', accent: '#FD0E35', white: '#FFF5F8'
+                }
+              }
+            }
+          }
+        }
+    </script>
+</head>
+
+<body class="font-sans antialiased bg-gradient-to-b from-kitty-lighter to-kitty-light min-h-screen overflow-x-hidden">
+    <!-- Floating Hello Kitty elements -->
+    <div class="kitty-bow-top-right"></div>
+    <div class="kitty-bow-bottom-left"></div>
+    
+    <div class="relative max-w-4xl mx-auto px-4 py-8 overflow-hidden">
+        
+        <!-- Header -->
+        <header class="text-center mb-8 relative">
+            <div class="floating-hearts"></div>
+            <div class="relative z-10">
+                <h1 class="font-fredoka text-3xl md:text-4xl lg:text-5xl text-kitty-accent mb-3 animate__animated animate__fadeIn">
+                    For My Hello Kitty Princess
+                </h1>
+                <p class="font-quicksand text-lg md:text-xl text-kitty-dark animate__animated animate__fadeIn animate__delay-1s">
+                    Just a little challenge for you... 💖
+                </p>
+            </div>
+        </header>
+
+        <!-- MAIN GAME CONTAINER -->
+        <div class="max-w-xl mx-auto">
+            
+            <!-- Password Section -->
+            <div id="password-section" class="bg-white/80 rounded-2xl p-6 shadow-xl border-2 border-kitty-primary animate__animated animate__fadeInUp">
+                <div class="text-center mb-6">
+                    <p class="font-quicksand text-kitty-dark font-bold text-lg mb-3">
+                        Aww! you're late baby girl so now... 🥺
+                    </p>
+                </div>
+                
+                <h3 class="font-fredoka text-xl text-center text-kitty-dark mb-4">Guess the password if you can 🤫</h3>
+                <input type="text" id="password-input" class="w-full px-4 py-3 rounded-full border-2 border-kitty-light focus:border-kitty-primary outline-none text-center font-quicksand mb-3" placeholder="Enter password...">
+                <button id="submit-password" class="w-full bg-kitty-primary text-white font-bold py-2 rounded-full mb-3 hover:bg-kitty-dark transition-colors">Let's Go!</button>
+                <a href="https://wa.me/7874444598?text=hieee%20my%20cutu%20where%20is%20my%20passworddd" target="_blank" class="block text-center text-sm text-kitty-dark hover:underline">
+                    fine! click here your cutu will help you
+                </a>
+            </div>
+
+            <!-- Mini Game Section (Hidden initially) -->
+            <div id="mini-game-section" class="hidden bg-white/90 rounded-3xl p-4 md:p-6 shadow-2xl border-4 border-kitty-light relative animate__animated animate__zoomIn mt-4 w-full">
+                <div class="absolute -top-4 -right-2 md:-right-6 text-3xl md:text-4xl animate-bounce z-10">🎀</div>
+                <div class="absolute -bottom-4 -left-2 md:-left-6 text-3xl md:text-4xl animate-bounce z-10">🎀</div>
+                
+                <h3 class="font-fredoka text-xl md:text-2xl text-center text-kitty-primary mb-2">Flashback Flowers 🌸</h3>
+                <p class="text-center font-quicksand text-sm text-kitty-dark mb-4 px-2">Tell me when I gave you this flower?</p>
+                
+                <div id="game-image-container" class="mb-6 relative group mx-auto w-full max-w-sm">
+                    <div class="absolute inset-0 bg-kitty-primary rounded-xl rotate-3 opacity-20 group-hover:rotate-6 transition-transform"></div>
+                    <img id="game-image" src="" alt="Flower Memory" class="relative rounded-xl shadow-md w-full h-auto max-h-[50vh] object-contain bg-white mx-auto">
+                </div>
+                
+                <div class="space-y-4 px-1">
+                    <div class="relative">
+                        <input type="date" id="game-date-input" class="w-full px-2 py-3 rounded-full border-2 border-kitty-primary text-kitty-dark text-center font-quicksand focus:outline-none focus:ring-4 focus:ring-kitty-light shadow-sm bg-white appearance-none min-w-0">
+                    </div>
+                    <button id="submit-guess" class="w-full bg-gradient-to-r from-kitty-primary to-kitty-dark text-white font-bold py-3 rounded-full shadow-lg transform active:scale-95 transition-all text-sm md:text-base">
+                        Is this correct? 💘
+                    </button>
+                </div>
+                
+                <div id="wrongs-counter" class="mt-4 text-center font-quicksand text-xs text-red-500 font-bold hidden">
+                    You don't love him counter: <span id="wrong-count">0</span> 💔
+                </div>
+            </div>
+
+            <!-- Final Prize Section (Hidden initially) -->
+            <div id="final-prize-section" class="hidden bg-white/95 rounded-[2rem] p-8 shadow-2xl border-4 border-kitty-accent text-center animate__animated animate__fadeInUp mt-4">
+                <h2 class="font-fredoka text-3xl text-kitty-accent mb-4">do you remember this?🌹</h2>
+                <div class="relative mb-6">
+                    <div class="absolute -inset-2 bg-gradient-to-r from-pink-300 to-red-300 rounded-2xl blur opacity-75"></div>
+                    <img src="images/24-06-24.jpg" alt="Our First Flower" class="relative rounded-xl shadow-xl w-full">
+                </div>
+                <p class="font-quicksand text-kitty-dark text-lg leading-relaxed italic">
+                    "The very first flower of our life. On the 24th of June of 2024, I gave my very first flower to a girl, and you received the very first flower of your life."
+                </p>
+                <div class="mt-6 text-4xl animate-pulse">❤️</div>
+            </div>
+
+        </div>
+        
+        <footer class="text-center pb-8 mt-12 relative">
+            <div class="kitty-pattern"></div>
+            <p class="font-quicksand text-kitty-dark">
+                Made for the prettiest girl 💖
+            </p>
+        </footer>
+    </div>
+    
+    <script src="js/game.js"></script>
+</body>
+</html>
